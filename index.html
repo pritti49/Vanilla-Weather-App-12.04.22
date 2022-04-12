@@ -20,12 +20,18 @@
         <div class="weather-app">
           <div class="overview">
             <form id="search-form">
-              <input
-                type="serach"
-                placeholder="Type of city.."
-                class="form-control"
-              />
-              <input type="submit" value="Search" />
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="serach"
+                    placeholder="Type of city.."
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-3">
+                  <input type="submit" value="Search" class="btn btn-primary" />
+                </div>
+              </div>
             </form>
             <h1 id="city"></h1>
             <ul>
