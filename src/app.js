@@ -110,8 +110,37 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+function displayFahrenheitTempreature(event) {
+    event.preventDefault(); 
+     let temperatureElement = document.querySelector("#temperature"); 
 
+        //remove the active class from celsius link
+    celsiusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
+    let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusLink(event) {
+    event.preventDefault();
+    celsiusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
+    let temperatureElement = document.querySelector("#temperature");
+temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+//gobal varibles
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("New York");
+// gobal varibles 
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTempreature);
+
+
+let celsiusLink= document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusLink);
+
+search ("Edinburgh");
