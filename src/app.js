@@ -38,6 +38,9 @@ function displayTempreature(response) {
     iconElement.setAttribute ("src" ,`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute ("alt", response.data.weather[0]. description);
 }
+function search(event) {
+    event.preventDefault();
+}
 
 let apiKey = "c68923fa1456eb2f9f1cb030550fbfa0";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
