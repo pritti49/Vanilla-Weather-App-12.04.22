@@ -128,7 +128,7 @@ fahrenheitLink.classList.remove("active");
     let temperatureElement = document.querySelector("#temperature");
 temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-
+// gobal varibles 
 let celsiusTemperature = null;
 
 //gobal varibles
